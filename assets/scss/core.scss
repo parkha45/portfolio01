@@ -1,0 +1,39 @@
+section {
+  width: 100%;
+  height: 880px;
+  border: 1px solid red;
+
+  header {
+    position: fixed;
+    border: 1px solid blue;
+    width: 100%;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        list-style: none;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+
+  .backimg1 {
+    background: url("/assets/image/backimg1.jpg");
+  }
+  .backimg2 {
+    background: url("/assets/image/backimg2.jpg");
+  }
+  .backimg3 {
+    background: url("/assets/image/backimg3.jpg");
+  }
+}

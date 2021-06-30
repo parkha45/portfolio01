@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,56 +10,75 @@
 
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="./assets/css/reset.min.css">
+	<link rel="stylesheet" href="./assets/css/core.min.css">
 
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
+
 <body>
 
 	<div id="wrap">
 
-		<header id="header">
-
-			<div class="container-fluid">
-				<div class="header-nav">
-					<div class="title">현아</div>
-					<ul class="nav">
-						<il class="project">project</il>
-						<il class="team">team</il>
-						<il class="contact">contact</il>
-					</ul>
-				</div><!--header-nav-->
-
-
-			</div><!--container-fluid-->
-
-		</header>
-
 		<section id="project">
-			<div class="container">
+
+			<header id="header">
+				<div class="container-fluid">
+					<div class="header-nav">
+						<div class="title">현아2</div>
+						<ul class="nav">
+							<il class="project">project</il>
+							<il class="team">team</il>
+							<il class="contact">contact</il>
+						</ul>
+					</div>
+					<!--header-nav-->
+				</div>
+				<!--container-fluid-->
+			</header>
+
+			<div class="swiper-container">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide backimg1"></li>
+					<li class="swiper-slide backimg2"></li>
+					<li class="swiper-slide backimg3"></li>
+				</ul>
+			</div>
+
+			<!-- <div class="container">
 				<div class="title"></div>
-			</div>  <!--container-->
+			</div>  container -->
 
 
 		</section>
+		<!--section#project-->
 
 		<section id="team">
 
 		</section>
+		<!--section#team-->
 
 		<section id="contact">
 
 		</section>
+		<!--section#contact-->
 
 		<footer>
 
 		</footer>
+		<!--footer-->
 	</div>
 
 
 	<script>
 
+		var headerSwiper = new Swiper('.swiper-container', {
+			loop: true,
+
+		})
+
 	</script>
 
 </body>
+
 </html>
