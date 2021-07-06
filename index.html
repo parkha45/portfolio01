@@ -13,7 +13,15 @@
 	<link rel="stylesheet" href="./assets/css/fixed-grid.min.css">
 	<link rel="stylesheet" href="./assets/css/core.min.css">
 
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
 
 </head>
 
@@ -194,12 +202,104 @@
 				<div class="tab">
 					<div class="tab-nav">
 						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
+							<li><a href="#Designer" class="active">Designer</a></li>
+							<li><a href="#Back">Back-end Developer</a></li>
+							<li><a href="#Front">Front-end Developer</a></li>
 						</ul>
 					</div>
-					<div class="tab-contents">
+					<div class="tab-contents Designer active">
+						<ul>
+							<!-- <li>
+								<div class="img-wrap">
+									<img src="" alt="">
+								</div>
+								<div class="text-wrap">
+									<div class="name"></div>
+									<div class="job"></div>
+								</div>
+								<div class="connect-wrap">
+									<div class="message"></div>
+									<div class="phone"></div>
+									<div class="female"></div>
+								</div>
+							</li>
+							<li>
+								<div class="img-wrap">
+									<img src="" alt="">
+								</div>
+								<div class="text-wrap">
+									<div class="name"></div>
+									<div class="job"></div>
+								</div>
+								<div class="connect-wrap">
+									<div class="message"></div>
+									<div class="phone"></div>
+									<div class="female"></div>
+								</div>
+							</li>
+							<li>
+								<div class="img-wrap">
+									<img src="" alt="">
+								</div>
+								<div class="text-wrap">
+									<div class="name"></div>
+									<div class="job"></div>
+								</div>
+								<div class="connect-wrap">
+									<div class="message"></div>
+									<div class="phone"></div>
+									<div class="female"></div>
+								</div>
+							</li> -->
+						</ul>
+					</div>
+					<div class="tab-contents Back">
+						<ul>
+							<li>
+								<div class="img-wrap">
+									<img src="" alt="">
+								</div>
+								<div class="text-wrap">
+									<div class="name"></div>
+									<div class="job"></div>
+								</div>
+								<div class="connect-wrap">
+									<div class="message"></div>
+									<div class="phone"></div>
+									<div class="female"></div>
+								</div>
+							</li>
+							<li>
+								<div class="img-wrap">
+									<img src="" alt="">
+								</div>
+								<div class="text-wrap">
+									<div class="name"></div>
+									<div class="job"></div>
+								</div>
+								<div class="connect-wrap">
+									<div class="message"></div>
+									<div class="phone"></div>
+									<div class="female"></div>
+								</div>
+							</li>
+							<li>
+								<div class="img-wrap">
+									<img src="" alt="">
+								</div>
+								<div class="text-wrap">
+									<div class="name"></div>
+									<div class="job"></div>
+								</div>
+								<div class="connect-wrap">
+									<div class="message"></div>
+									<div class="phone"></div>
+									<div class="female"></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="tab-contents Front">
 						<ul>
 							<li>
 								<div class="img-wrap">
@@ -252,30 +352,54 @@
 		</section><!--section#team-->
 
 		<section id="contact">
-
+			<div class="container">
+				<div class="contact-wrap">
+					<div class="img-wrap">
+						<img src="/assets/image/formImg.png" alt="">
+					</div>
+					<div class="form-wrap">
+						<form action="">
+							<div class="form-group">
+								<label for="">Company or Your-name</label>
+								<input type="text" placeholder="Company or Your-name">
+							</div>
+							<div class="form-group">
+								<label for="">Email</label>
+								<input type="text" placeholder="webmaster@example.com">
+							</div>
+							<div class="form-group">
+								<label for="">Messages</label>
+								<input type="text" placeholder="Please enter your request." class="text">
+							</div>
+						</form>
+						<button>Send Request</button>
+					</div>
+				</div>
+			</div>
 		</section><!--section#contact-->
 
 		<footer>
-
+			<h4>ⓒ 2021 your-name</h4>
+			<span>jQuery, Swiper, Font Awesome 5, Random User Generator, Unsplash, Website Vectors by Vecteezy</span>
 		</footer><!--footer-->
 	</div>
 
 
 	<script>
 
-		var topSwiper = new Swiper('.topSwiper', {
+		const topSwiper = new Swiper('.topSwiper', {
 			effect: 'fade',
 			loop: true
 
 		})
 
-		var projectSwiper1 = new Swiper('.projectSwiper2', {
+		const projectSwiper1 = new Swiper('.projectSwiper2', {
 			loop: false,
 			spaceBetween: 10,
 			slidesPerView: 2.5
 		})
 
-		var projectSwiper2 = new Swiper('.projectSwiper1', {
+		const projectSwiper2 = new Swiper('.projectSwiper1', {
 			loop: false,
 			spaceBetween: 10,
 			slidesPerView: 1,
@@ -283,6 +407,171 @@
 				swiper: projectSwiper1,
 			}
 		})
+
+		$(document).ready(function() {
+			$('.tab-nav a').click( function(e) {
+				e.preventDefault();
+
+				var t = $(this);
+				var target = t.attr('href');
+					target = target.replace('#', '');
+
+				console.log(target);
+				if( ! t.hasClass('active') ) {
+					$('.tab-nav a').removeClass('active');
+					t.addClass('active');
+
+					$('.tab-contents').removeClass('active');
+					$('.tab-contents.' +target).addClass('active');
+				}
+			});
+
+			// var userFunc = function(user, output) {
+			// 	console.log(1);
+
+
+
+			// 	output += '<li>';
+			// 	output += '	<div class="img-wrap">';
+			// 	output += '		<img src="'+ user.picture.large +'" alt="사용자이미지">';
+			// 	output += '	</div>';
+			// 	output += '	<div class="text-wrap">';
+			// 	output += '		<div class="name">'+ user.name.first +'</div>';
+			// 	output += '		<div class="job">Designer</div>';
+			// 	output += '	</div>';
+			// 	output += '	<div class="connect-wrap">';
+			// 	output += '		<div class="message"></div>';
+			// 	output += '		<div class="phone"></div>';
+			// 	output += '		<div class="female"></div>';
+			// 	output += '	</div>';
+			// 	output += '</li>';
+
+			// 	return output;
+			// }
+
+			var designerUser = function() {
+				$.ajax({
+					url: 'https://randomuser.me/api/',
+					data: {
+						gender: 'female',
+						results: 3
+					},
+					dataType: 'json',
+					success: function(data) {
+						var output = '';
+
+						for(var i=0; i<3; i++){
+							var user = data.results[i];
+							console.log(data);
+							console.log(i);
+							// userFunc(user, output);
+
+							output += '<li>';
+							output += '	<div class="img-wrap">';
+							output += '		<img src="'+ user.picture.large +'" alt="사용자이미지">';
+							output += '	</div>';
+							output += '	<div class="text-wrap">';
+							output += '		<div class="name">'+ user.name.first +'</div>';
+							output += '		<div class="job">Designer</div>';
+							output += '	</div>';
+							output += '	<div class="connect-wrap">';
+							output += '		<div class="message"><i class="far fa-envelope"></i></div>';
+							output += '		<div class="phone"><i class="fas fa-phone"></i></div>';
+							output += '		<div class="female"><i class="fas fa-venus"></i></div>';
+							output += '	</div>';
+							output += '</li>';
+
+							$('.Designer ul').html(output);
+						}
+
+					}
+				});
+			}
+
+			var backUser = function() {
+				$.ajax({
+					url: 'https://randomuser.me/api/',
+					data: {
+						gender: 'female',
+						results: 2
+					},
+					dataType: 'json',
+					success: function(data) {
+						var output = '';
+
+						for(var i=0; i<3; i++){
+							var user = data.results[i];
+							console.log(data);
+							console.log(i);
+							// userFunc(user, output);
+
+							output += '<li>';
+							output += '	<div class="img-wrap">';
+							output += '		<img src="'+ user.picture.large +'" alt="사용자이미지">';
+							output += '	</div>';
+							output += '	<div class="text-wrap">';
+							output += '		<div class="name">'+ user.name.first +'</div>';
+							output += '		<div class="job">Designer</div>';
+							output += '	</div>';
+							output += '	<div class="connect-wrap">';
+							output += '		<div class="message"><i class="far fa-envelope"></i></div>';
+							output += '		<div class="phone"><i class="fas fa-phone"></i></div>';
+							output += '		<div class="female"><i class="fas fa-mars"></i></div>';
+							output += '	</div>';
+							output += '</li>';
+
+							$('.Designer ul').html(output);
+						}
+
+					}
+				});
+			}
+
+			var frontUser = function() {
+				$.ajax({
+					url: 'https://randomuser.me/api/',
+					data: {
+						gender: 'female',
+						results: 1
+					},
+					dataType: 'json',
+					success: function(data) {
+						var output = '';
+
+						for(var i=0; i<3; i++){
+							var user = data.results[i];
+							console.log(data);
+							console.log(i);
+							// userFunc(user, output);
+
+							output += '<li>';
+							output += '	<div class="img-wrap">';
+							output += '		<img src="'+ user.picture.large +'" alt="사용자이미지">';
+							output += '	</div>';
+							output += '	<div class="text-wrap">';
+							output += '		<div class="name">'+ user.name.first +'</div>';
+							output += '		<div class="job">Designer</div>';
+							output += '	</div>';
+							output += '	<div class="connect-wrap">';
+							output += '		<div class="message"></div>';
+							output += '		<div class="phone"></div>';
+							output += '		<div class="female"></div>';
+							output += '	</div>';
+							output += '</li>';
+
+							$('.Designer ul').html(output);
+						}
+
+					}
+				});
+			}
+
+			designerUser();
+
+
+
+		});
+
 
 	</script>
 
