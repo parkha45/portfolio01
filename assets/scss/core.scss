@@ -167,20 +167,47 @@ li {
 	.thumpSwiper-wrap {
 		display: flex;
 		align-items: center;
-		justify-content: space-around;
+		justify-content: space-between;
 	}
 
 	.sideSwp-wrap1 {
-		width: 520px;
+		width: 400px;
 		overflow: hidden;
 
 		.projectSwiper1 {
 
-			img {
+			.bottom {
+				width: 100%;
+				height: 100px;
+				position: absolute;
+				bottom: 0;
 
-				display: block;
-				object-fit: cover;
+				.text-wrap {
+					color: white;
+					width: 100%;
+					height: 100px;
+					background-color: black;
+					opacity: 0.5;
+					padding: 22px 35px;
+
+					.text {
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						overflow: hidden;
+					}
+				}
 			}
+
+			.img-wrap {
+				width: 100%;
+				height: 100%;
+				img {
+					width: 100%;
+					object-fit: cover;
+				}
+			}
+
+
 		}
 
 	}
