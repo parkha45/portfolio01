@@ -36,9 +36,9 @@
 					<div class="header-nav">
 						<div class="title">PARK HYUNAH</div>
 						<ul class="nav">
-							<li class="project">project</li>
-							<li class="team">team</li>
-							<li class="contact">contact</li>
+							<li><a href="#project" class="active">project</a></li>
+							<li><a href="#team">team</a></li>
+							<li><a href="#contact">contact</a></li>
 						</ul>
 					</div>
 					<!--header-nav-->
@@ -209,140 +209,17 @@
 					</div>
 					<div class="tab-contents Designer active">
 						<ul>
-							<!-- <li>
-								<div class="img-wrap">
-									<img src="" alt="">
-								</div>
-								<div class="text-wrap">
-									<div class="name"></div>
-									<div class="job"></div>
-								</div>
-								<div class="connect-wrap">
-									<div class="message"></div>
-									<div class="phone"></div>
-									<div class="female"></div>
-								</div>
-							</li>
-							<li>
-								<div class="img-wrap">
-									<img src="" alt="">
-								</div>
-								<div class="text-wrap">
-									<div class="name"></div>
-									<div class="job"></div>
-								</div>
-								<div class="connect-wrap">
-									<div class="message"></div>
-									<div class="phone"></div>
-									<div class="female"></div>
-								</div>
-							</li>
-							<li>
-								<div class="img-wrap">
-									<img src="" alt="">
-								</div>
-								<div class="text-wrap">
-									<div class="name"></div>
-									<div class="job"></div>
-								</div>
-								<div class="connect-wrap">
-									<div class="message"></div>
-									<div class="phone"></div>
-									<div class="female"></div>
-								</div>
-							</li> -->
+
 						</ul>
 					</div>
 					<div class="tab-contents Back">
 						<ul>
-							<li>
-								<div class="img-wrap">
-									<img src="" alt="">
-								</div>
-								<div class="text-wrap">
-									<div class="name"></div>
-									<div class="job"></div>
-								</div>
-								<div class="connect-wrap">
-									<div class="message"></div>
-									<div class="phone"></div>
-									<div class="female"></div>
-								</div>
-							</li>
-							<li>
-								<div class="img-wrap">
-									<img src="" alt="">
-								</div>
-								<div class="text-wrap">
-									<div class="name"></div>
-									<div class="job"></div>
-								</div>
-								<div class="connect-wrap">
-									<div class="message"></div>
-									<div class="phone"></div>
-									<div class="female"></div>
-								</div>
-							</li>
-							<li>
-								<div class="img-wrap">
-									<img src="" alt="">
-								</div>
-								<div class="text-wrap">
-									<div class="name"></div>
-									<div class="job"></div>
-								</div>
-								<div class="connect-wrap">
-									<div class="message"></div>
-									<div class="phone"></div>
-									<div class="female"></div>
-								</div>
-							</li>
+
 						</ul>
 					</div>
 					<div class="tab-contents Front">
 						<ul>
-							<li>
-								<div class="img-wrap">
-									<img src="" alt="">
-								</div>
-								<div class="text-wrap">
-									<div class="name"></div>
-									<div class="job"></div>
-								</div>
-								<div class="connect-wrap">
-									<div class="message"></div>
-									<div class="phone"></div>
-									<div class="female"></div>
-								</div>
-							</li>
-							<li>
-								<div class="img-wrap">
-									<img src="" alt="">
-								</div>
-								<div class="text-wrap">
-									<div class="name"></div>
-									<div class="job"></div>
-								</div>
-								<div class="connect-wrap">
-									<div class="message"></div>
-									<div class="phone"></div>
-									<div class="female"></div>
-								</div>
-							</li>
-							<li>
-								<div class="img-wrap">
-									<img src="" alt="">
-								</div>
-								<div class="text-wrap">
-									<div class="name"></div>
-									<div class="job"></div>
-								</div>
-								<div class="connect-wrap">
-									<div class="message"></div>
-									<div class="phone"></div>
-									<div class="female"></div>
-								</div>
-							</li>
+
 						</ul>
 					</div>
 				</div>
@@ -372,7 +249,7 @@
 								<input type="text" placeholder="Please enter your request." class="text">
 							</div>
 						</form>
-						<button>Send Request</button>
+						<button>Send Request<i class="far fa-paper-plane"></i></button>
 					</div>
 				</div>
 			</div>
@@ -387,17 +264,43 @@
 
 	<script>
 
+		const header = document.querySelector('#header');
+		let headerOldClass;
+
+		// const headerScroll = $('header');
+		// const window = $(window);
+		// const page = $('.project');
+		// const pageOffsetTop = page.offset().top;
+
+		// window.resize(function(){
+		// 	pageOffsetTop = page.offset().top;
+		// })
+
+		// window.on('scroll', function(){
+		// 	const scroll = window.scrollTop();
+		// 	headerScroll.toggleClass('down', scroll)
+		// })
+
+		function changeheadColor( slider ) {
+			let activeSlider = slider.slides[slider.activeIndex];
+			let headerClass = activeSlider.dataset.headerType;
+
+			header.removeAttribute('class');
+			header.classList.add(headerOldClass, headerClass);
+
+		}
+
 		const topSwiper = new Swiper('.topSwiper', {
 			effect: 'fade',
 			loop: true
 
-		})
+		});
 
 		const projectSwiper1 = new Swiper('.projectSwiper2', {
 			loop: false,
 			spaceBetween: 10,
 			slidesPerView: 2.5
-		})
+		});
 
 		const projectSwiper2 = new Swiper('.projectSwiper1', {
 			loop: false,
@@ -406,49 +309,9 @@
 			thumbs: {
 				swiper: projectSwiper1,
 			}
-		})
+		});
 
 		$(document).ready(function() {
-			$('.tab-nav a').click( function(e) {
-				e.preventDefault();
-
-				var t = $(this);
-				var target = t.attr('href');
-					target = target.replace('#', '');
-
-				console.log(target);
-				if( ! t.hasClass('active') ) {
-					$('.tab-nav a').removeClass('active');
-					t.addClass('active');
-
-					$('.tab-contents').removeClass('active');
-					$('.tab-contents.' +target).addClass('active');
-				}
-			});
-
-			// var userFunc = function(user, output) {
-			// 	console.log(1);
-
-
-
-			// 	output += '<li>';
-			// 	output += '	<div class="img-wrap">';
-			// 	output += '		<img src="'+ user.picture.large +'" alt="사용자이미지">';
-			// 	output += '	</div>';
-			// 	output += '	<div class="text-wrap">';
-			// 	output += '		<div class="name">'+ user.name.first +'</div>';
-			// 	output += '		<div class="job">Designer</div>';
-			// 	output += '	</div>';
-			// 	output += '	<div class="connect-wrap">';
-			// 	output += '		<div class="message"></div>';
-			// 	output += '		<div class="phone"></div>';
-			// 	output += '		<div class="female"></div>';
-			// 	output += '	</div>';
-			// 	output += '</li>';
-
-			// 	return output;
-			// }
-
 			var designerUser = function() {
 				$.ajax({
 					url: 'https://randomuser.me/api/',
@@ -462,8 +325,8 @@
 
 						for(var i=0; i<3; i++){
 							var user = data.results[i];
-							console.log(data);
-							console.log(i);
+
+
 							// userFunc(user, output);
 
 							output += '<li>';
@@ -492,17 +355,17 @@
 				$.ajax({
 					url: 'https://randomuser.me/api/',
 					data: {
-						gender: 'female',
+						gender: 'male',
 						results: 2
 					},
 					dataType: 'json',
 					success: function(data) {
 						var output = '';
 
-						for(var i=0; i<3; i++){
+						for(var i=0; i<2; i++){
 							var user = data.results[i];
-							console.log(data);
-							console.log(i);
+
+
 							// userFunc(user, output);
 
 							output += '<li>';
@@ -520,7 +383,7 @@
 							output += '	</div>';
 							output += '</li>';
 
-							$('.Designer ul').html(output);
+							$('.Back ul').html(output);
 						}
 
 					}
@@ -531,17 +394,16 @@
 				$.ajax({
 					url: 'https://randomuser.me/api/',
 					data: {
-						gender: 'female',
 						results: 1
 					},
 					dataType: 'json',
 					success: function(data) {
 						var output = '';
 
-						for(var i=0; i<3; i++){
+						for(var i=0; i<1; i++){
 							var user = data.results[i];
-							console.log(data);
-							console.log(i);
+
+
 							// userFunc(user, output);
 
 							output += '<li>';
@@ -559,7 +421,7 @@
 							output += '	</div>';
 							output += '</li>';
 
-							$('.Designer ul').html(output);
+							$('.Front ul').html(output);
 						}
 
 					}
@@ -568,9 +430,31 @@
 
 			designerUser();
 
+			$('.tab-nav a').click( function(e) {
+				e.preventDefault();
 
+				var t = $(this);
+				var target = t.attr('href');
+					target = target.replace('#', '');
+				if( ! t.hasClass('active') ) {
+					$('.tab-nav a').removeClass('active');
+					t.addClass('active');
 
+					if( target == 'Designer' ) {
+						designerUser();
+					} else if( target == 'Back' ) {
+						backUser();
+					}
+					else if( target == 'Front' ) {
+						frontUser();
+					}
+
+					$('.tab-contents').removeClass('active');
+					$('.tab-contents.' +target).addClass('active');
+				}
+			});
 		});
+
 
 
 	</script>
