@@ -4,7 +4,6 @@ body {
 
 section {
 	width: 100%;
-	border: 1px solid red;
 
 
 // section#project = & 부모선택자는 부모의 selector를 그대로 가지고 온다.
@@ -30,14 +29,15 @@ li {
 	position: fixed;
 	width: 100%;
 	z-index: 99;
+	height: 80px;
 
 	.header-nav {
 		width: 100%;
-		margin-top: 20px;
+		margin-top: 15px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		color: white;
+
 
 		ul {
 			display: flex;
@@ -48,6 +48,13 @@ li {
 			margin-left: 20px;
 		}
 	}
+}
+
+.light {
+	color: white;
+}
+.dark {
+	color: dark;
 }
 
 
@@ -181,20 +188,27 @@ li {
 				height: 100px;
 				position: absolute;
 				bottom: 0;
+				display: flex;
+				background-color: #000;
+				opacity: .5;
+				padding: 22px 35px;
 
 				.text-wrap {
 					color: white;
-					width: 100%;
+					width: calc(100% - 50px);
 					height: 100px;
-					background-color: black;
-					opacity: 0.5;
-					padding: 22px 35px;
 
 					.text {
 						text-overflow: ellipsis;
 						white-space: nowrap;
 						overflow: hidden;
 					}
+				}
+
+				a {
+					width: 50px;
+					height: 50px;
+					background-color: white;
 				}
 			}
 
@@ -218,13 +232,22 @@ li {
 
 		.projectSwiper2 {
 
+			.img-wrap img:hover {
+				border: 1.7px solid gray;
+				border-radius: 3px;
+			}
+
 			img {
 
 				display: block;
 				object-fit: cover;
 			}
-		}
 
+			.swiper-slide-thumb-active {
+				border: 1.7px solid gray;
+				border-radius: 3px;
+			}
+		}
 	}
 
 }
